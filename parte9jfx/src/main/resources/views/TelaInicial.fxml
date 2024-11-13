@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ifrs.parte9jfx.controllers.TelaController">
+   <top>
+      <Label text="Lista de ideias" textAlignment="CENTER" textFill="#e11903" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="tblLista" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clmId" prefWidth="52.0" text="id" />
+          <TableColumn fx:id="clmTitulo" prefWidth="414.0" text="titulo" />
+            <TableColumn fx:id="clmUrgencia" minWidth="0.0" prefWidth="131.0" text="urgência" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleNova" text="Nova Ideia" />
+            <Button mnemonicParsing="false" onAction="#handleAlterar" text="Alterar Ideia" />
+            <Button mnemonicParsing="false" onAction="#handleExcluir" text="Excluir ideia" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
